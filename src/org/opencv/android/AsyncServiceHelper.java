@@ -21,7 +21,6 @@ class AsyncServiceHelper
             final LoaderCallbackInterface Callback)
     {
         AsyncServiceHelper helper = new AsyncServiceHelper(Version, AppContext, Callback);
-
         Intent intent = new Intent("org.opencv.engine.BIND");
         intent.setPackage("org.opencv.engine");
         if (AppContext.bindService(intent, helper.mServiceConnection, Context.BIND_AUTO_CREATE))
@@ -377,7 +376,7 @@ class AsyncServiceHelper
             else
             {
                 // If the dependencies list is not defined or empty.
-                String AbsLibraryPath = Path + File.separator + "libopencv_java.so";
+                String AbsLibraryPath = Path + File.separator + "libopencv_java3.so";
                 result &= loadLibrary(AbsLibraryPath);
             }
 
